@@ -1,0 +1,56 @@
+A. Informasi Demografi & Latar Belakang Keluarga
+Marital_status (Status Pernikahan): Status pernikahan siswa saat mendaftar (misalnya: lajang, menikah, bercerai, duda/janda). Biasanya direpresentasikan dalam bentuk kode angka.
+Nacionality (Kewarganegaraan): Negara asal siswa (apakah warga negara lokal atau internasional).
+Mothers_qualification & Fathers_qualification (Pendidikan Ibu & Ayah): Tingkat pendidikan terakhir orang tua siswa (misalnya: tingkat pendidikan dasar, menengah, atau perguruan tinggi).
+Mothers_occupation & Fathers_occupation (Pekerjaan Ibu & Ayah): Jenis profesi atau pekerjaan orang tua siswa.
+Displaced (Pindahan/Merantau): Menunjukkan apakah siswa tersebut adalah pelajar yang harus pindah tempat tinggal/merantau dari daerah asal untuk berkuliah di institusi tersebut (biner: Ya/Tidak).
+Educational_special_needs (Kebutuhan Khusus Pendidikan): Status apakah siswa memiliki kebutuhan khusus atau disabilitas tertentu.
+Tuition_fees_up_to_date (Pembayaran Kuliah Lancar): Status apakah pembayaran uang kuliah/ SPP siswa tersebut up-to-date atau tepat waktu (biner: Ya/Tidak).
+Gender (Jenis Kelamin): Jenis kelamin siswa (laki-laki atau perempuan).
+Scholarship_holder (Penerima Beasiswa): Status apakah siswa tersebut mendapatkan beasiswa atau bantuan biaya pendidikan (biner: Ya/Tidak).
+Age_at_enrollment (Usia saat Pendaftaran): Umur siswa ketika pertama kali mendaftar/masuk ke institusi.
+International (Siswa Internasional): Status apakah siswa tersebut adalah mahasiswa asing/internasional (biner: Ya/Tidak).
+
+
+B. Informasi Pendaftaran & Akademik Awal
+- Application_mode (Jalur Pendaftaran): Jalur atau cara siswa mendaftar ke institusi (misalnya: jalur nilai ujian nasional, jalur undangan, mahasiswa transfer, dll.).
+- Application_order (Urutan Pilihan Pendaftaran): Pilihan ke berapa institusi/jurusan ini dipilih oleh siswa saat mendaftar (misalnya: pilihan pertama, kedua, dsb.).
+- Course (Program Studi / Jurusan): Jurusan atau program studi yang diambil oleh siswa di institusi.
+- Daytime_evening_attendance (Waktu Kuliah): Apakah siswa mengambil kelas reguler (siang/pagi) atau kelas malam (evening).
+
+Previous_qualification (Pendidikan Sebelumnya): Jenjang pendidikan terakhir yang diselesaikan siswa sebelum masuk kuliah (misalnya: SMA, SMK, diploma, dll.).
+
+Previous_qualification_grade (Nilai Pendidikan Sebelumnya): Nilai rata-rata dari jenjang pendidikan sebelumnya.
+
+Admission_grade (Nilai Masuk / Seleksi): Nilai tes seleksi masuk atau nilai yang digunakan sebagai penentu diterima tidaknya siswa di institusi.
+
+C. Performa Akademik Semester (Semester 1 & Semester 2)
+Atribut ini dibagi menjadi dua bagian identik untuk Semester 1 (1st_sem) dan Semester 2 (2nd_sem):
+
+Curricular_units_..._credited (Mata Kuliah yang Diakui/Kredit): Jumlah mata kuliah dari pendidikan sebelumnya yang diakui atau ditransfer ke semester ini.
+
+Curricular_units_..._enrolled (Mata Kuliah yang Diambil): Jumlah mata kuliah yang diambil/didaftarkan oleh siswa pada semester tersebut.
+
+Curricular_units_..._evaluations (Jumlah Evaluasi/Ujian): Jumlah ujian atau evaluasi yang diikuti oleh siswa pada semester tersebut.
+
+Curricular_units_..._approved (Mata Kuliah yang Lulus): Jumlah mata kuliah yang berhasil diselesaikan/lulus dengan baik oleh siswa pada semester tersebut.
+
+Curricular_units_..._grade (Nilai Rata-Rata): Rata-rata nilai akademis yang diperoleh siswa pada semester tersebut.
+
+Curricular_units_..._without_evaluations (Tanpa Evaluasi): Jumlah mata kuliah yang didaftar tetapi siswa tidak mengikuti ujian/evaluasinya.
+
+D. Indikator Ekonomi Makro (Faktor Eksternal)
+Unemployment_rate (Tingkat Pengangguran): Tingkat pengangguran di wilayah/negara pada periode tersebut (faktor ekonomi makro yang bisa memengaruhi kemampuan finansial siswa).
+Debtor (Punya Utang): Status apakah siswa memiliki catatan tunggakan atau utang pembayaran kepada institusi (biner: Ya/Tidak).
+Inflation_rate (Tingkat Inflasi): Tingkat inflasi pada periode tersebut.
+
+GDP (Produk Domestik Bruto): Kondisi pertumbuhan ekonomi makro (GDP) pada saat itu.
+
+E. Target Variabel
+Status (Status Akhir Siswa): Kolom target/label yang ingin diprediksi. Biasanya berisi tiga kategori utama:
+
+Dropout (Putus sekolah/keluar)
+
+Graduate (Lulus)
+
+Enrolled (Masih aktif belajar)
