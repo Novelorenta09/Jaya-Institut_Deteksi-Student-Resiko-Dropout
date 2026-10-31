@@ -1,4 +1,4 @@
-# Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Edutech
+# Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Jaya Jaya Institut
 
 ## Business Understanding
 Jaya Jaya Institut merupakan salah satu institusi pendidikan perguruan yang telah berdiri sejak tahun 2000. Hingga saat ini ia telah mencetak banyak lulusan dengan reputasi yang sangat baik. Akan tetapi, terdapat banyak juga siswa yang tidak menyelesaikan pendidikannya alias dropout.
@@ -9,32 +9,60 @@ Jumlah dropout yang tinggi ini tentunya menjadi salah satu masalah yang besar un
 Tingginya jumlah siswa di Jaya Institut yang tidak menyelesaikan pendidikannya atau mengalami droput. Hal ini menjadi masalah besar bagi institusi pendidikan karena dapat mempengaruhi reputasi institusi dan kualitas kelulusan.
 
 ### Cakupan Proyek
-- Membantu institusi mendeteksi secepat mungkin siswa yang berpotensi melakukan droput agar mereka dapat segera diberikan bimbingan khusus.
-- Membuatkan dashboard interaktif berdasarkan dataset performa siswa agar pihak institusi lebih mudah memahami data dan memonitor performa siswa
+- Proyek dikerjakan menggunakan tools seperti supabase, metabase (dashboard), python, Jupyternotebook, Streamlit (protoypye Model)
+- Model dibuat menggunakan Machine Learning yakni  algoritma Gradient Boosting dengan metode LGBMClassifier
+- Data bersumber dari Dicoding
+- Permasalahan proyek terkait mendeteksi secepat mungkin siswa yang mungkin akan melakukan dropout sehingga dapat diberi bimbingan khusus
 
 ### Persiapan
+- Versi metabese: 0.63.19.1.
+- Versi Python: 3.14.7
+- Versi Scikit-learn: 1.9.1
+- email: root@mail.com
+- pass: root123
+- Akses: http://localhost:3000 
+- Sumber data: "https://raw.githubusercontent.com/dicodingacademy/dicoding_dataset/bce7a57a496d083716138922bc5839b5c30fa4ea/students_performance/data.csv"
 
-Sumber data: ....
 
 Setup environment:
 ```
-
+- pip install -r requirements.txt
+- pipenv install jupyter
+- pipenv shell
+- jupyter notebook 
 ```
 
 ## Business Dashboard
-Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
+Monitoring / Operational Dashboard dengan fokus Menjawab:
+- Total keseluruhan siswa, Total dropout, Total aktif, Persentase dropout
+- Isi chart: Visual dari status siswa berdasarkan kelas pagi atau siang, beasiswa berdasarkan status, jumlah siswa yang dropout per tiap jurusan, serta jumlah yang dropout berdasarkan jenis kelamin.
+- Link Here (http://localhost:3000/public/dashboard/d3bb0f5b-92e3-4285-9275-8b5491c8a129)
+
 
 ## Menjalankan Sistem Machine Learning
 Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Selain itu, sertakan juga link untuk mengakses prototype tersebut.
 
 ```
-
+- git clone https://github.com/username-anda/jaya-institut_deteksi-student-resiko-dropout.git
+- cd jaya-institut_deteksi-student-resiko-dropout
+- pip install -r requirements.txt
+- streamlit run data_deploy.py
+- link prototype: https://jaya-institutdeteksi-student-resiko-dropout-nrwvfnkgwqftmiozxj.streamlit.app/
 ```
 
 ## Conclusion
-Jelaskan konklusi dari proyek yang dikerjakan.
+Berdasarkan dashboard Metabase:
+1. Tingkat Risiko Dropout yang Signifikan: Dari total 4.424 siswa, institusi menghadapi tantangan retensi yang cukup besar dengan angka dropout rate mencapai 32,12% (1.421 siswa putus sekolah), sementara siswa yang masih aktif (enrolled) berada di angka 794 orang.
+2. Mayoritas besar aktivitas perkuliahan terkonsentrasi pada Kelas Siang (Daytime) sebesar 89,1% dibandingkan Kelas Malam (Evening) 10,9%.
+3. Siswa yang berstatus dropout lebih mendominasi terhadap perempuan hingga mencapai 64% dibanding laki-laki yang hanya 35%
+4. Siswa yang menerima beasiswa justru lebih banyak yang dropout yakni 168 orang dibanding dengan yang tidak menerima beasiswa yang hanya 17 orang.
+5. Jurusan yang paling tinggi berdasarkan status dropout adalah diduduki jurusan "Management (evening attedence)" 136 orang, selanjutnya ada "Management" 134 orang, dan di posisi ke-3 adalah jurusan "Nursing" 118 orang.
+
+Berdasarkan analisa Model GradientBoosting:
+
+
 
 ### Rekomendasi Action Items
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
-- action item 1
-- action item 2
+1. Keringanan Pembayaran Uang Kuliah yang mana berdasarkan dari mdoel faktor keuangan (tuition fees up to date dan status debtor) merupakan salah satu pendorong  dari model LightGBM, pihak kampus  bagian keuangan perlu membuka program restrukturisasi cicilan atau bantuan subsidi/beasiswa darurat khusus bagi mahasiswa aktif berisiko tinggi agar kendala finansial tidak berujung pada putus kuliah.
+
+2. Pendampingan Akademik Terfokus (Academic Tutoring & Mentoring): Berdasarkan temuan variabel akademik (seperti nilai semester 1 dan semester 2), kampus harus mengaktifkan program bimbingan konseling dan tutoring wajib bagi mahasiswa di jurusan-jurusan dengan tingkat dropout tertinggi untuk mendongkrak performa belajar mereka sejak awal semester.
