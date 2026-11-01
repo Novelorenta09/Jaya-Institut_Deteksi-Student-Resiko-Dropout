@@ -1,4 +1,4 @@
-# Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Jaya Jaya Institut
+# Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Edutech
 
 ## Business Understanding
 Jaya Jaya Institut merupakan salah satu institusi pendidikan perguruan yang telah berdiri sejak tahun 2000. Hingga saat ini ia telah mencetak banyak lulusan dengan reputasi yang sangat baik. Akan tetapi, terdapat banyak juga siswa yang tidak menyelesaikan pendidikannya alias dropout.
@@ -43,7 +43,7 @@ Monitoring / Operational Dashboard dengan fokus Menjawab:
 Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Selain itu, sertakan juga link untuk mengakses prototype tersebut.
 
 ```
-- git clone https://github.com/username-anda/jaya-institut_deteksi-student-resiko-dropout.git
+- git clone https://github.com/Novelorenta09/jaya-institut_deteksi-student-resiko-dropout.git
 - cd jaya-institut_deteksi-student-resiko-dropout
 - pip install -r requirements.txt
 - streamlit run data_deploy.py
@@ -59,10 +59,12 @@ Berdasarkan dashboard Metabase:
 5. Jurusan yang paling tinggi berdasarkan status dropout adalah diduduki jurusan "Management (evening attedence)" 136 orang, selanjutnya ada "Management" 134 orang, dan di posisi ke-3 adalah jurusan "Nursing" 118 orang.
 
 Berdasarkan analisa Model GradientBoosting:
-
+1. Model telah berhasil dilatih secara bersih dengan hanya menggunakan status "Dropout" & "Graduate" sebanyak 2.904 data latih. Berdasarkan evaluasi, model menunjukkan performa baik dengan tingkat akurasi, metrik seperti presisi, recall, f1-score yang optimal.
+2. Insight Utama: Melalui pemanfaatan data siswa berstatus Enrolled (yang belum memiliki label akhir) ke dalam model, sistem berhasil melakukan scoring probabilitas risiko secara individu.
+Analisis ini mendeteksi adanya sejumlah siswa aktif yang memiliki probabilitas dropout, yang sebagian besar terkonsentrasi pada nilai akademik, uang kuliah dan yang lain.
 
 
 ### Rekomendasi Action Items
-1. Keringanan Pembayaran Uang Kuliah yang mana berdasarkan dari mdoel faktor keuangan (tuition fees up to date dan status debtor) merupakan salah satu pendorong  dari model LightGBM, pihak kampus  bagian keuangan perlu membuka program restrukturisasi cicilan atau bantuan subsidi/beasiswa darurat khusus bagi mahasiswa aktif berisiko tinggi agar kendala finansial tidak berujung pada putus kuliah.
+1. Keringanan Pembayaran Uang Kuliah yang mana berdasarkan dari mdoel faktor keuangan (tuition fees up to date dan status debtor) merupakan salah satu pendorong  dari model LightGBM, pihak kampus  bagian keuangan perlu membuka program restrukturisasi cicilan atau bantuan subsidi/beasiswa darurat khusus bagi siswa aktif berisiko tinggi agar kendala finansial tidak berujung pada putus kuliah.
 
-2. Pendampingan Akademik Terfokus (Academic Tutoring & Mentoring): Berdasarkan temuan variabel akademik (seperti nilai semester 1 dan semester 2), kampus harus mengaktifkan program bimbingan konseling dan tutoring wajib bagi mahasiswa di jurusan-jurusan dengan tingkat dropout tertinggi untuk mendongkrak performa belajar mereka sejak awal semester.
+2. Pendampingan Akademik Terfokus (Academic Tutoring & Mentoring): Berdasarkan temuan variabel akademik (seperti nilai semester 1 dan semester 2), kampus harus mengaktifkan program bimbingan konseling dan tutoring wajib bagi siswa di jurusan-jurusan dengan tingkat dropout tertinggi untuk mendongkrak performa belajar mereka sejak awal semester.
