@@ -57,6 +57,8 @@ if submit_button:
     input_data.loc[0, 'Course'] = course
     input_data.loc[0, 'Daytime_evening_attendance'] = daytime_attendance
     input_data.loc[0, 'Previous_qualification_grade'] = previous_grade
+    input_data.loc[0, 'Scholarship_holder'] = scholarship
+    input_data.loc[0, 'Tuition_fees_up_to_date'] = Tuition_fees_up_to_date
     
     # Konversi tipe data dengan aman (mengabaikan error casting jika ada tipe khusus)
     for col in template_df.columns:
