@@ -47,7 +47,7 @@ Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Se
 - cd jaya-institut_deteksi-student-resiko-dropout
 - pip install -r requirements.txt
 - streamlit run data_deploy.py
-- Link prototype:  https://jaya-institutdeteksi-student-resiko-dropout-hyphlrdpb7dphckagl.streamlit.app/
+- Link prototype : https://jaya-institutdeteksi-student-resiko-dropout-gbpotvynzhhye4exm7.streamlit.app/
 ```
 
 ## Conclusion
