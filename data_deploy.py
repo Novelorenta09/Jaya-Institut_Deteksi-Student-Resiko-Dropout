@@ -3,8 +3,10 @@ import pandas as pd
 import joblib
 
 # Load Model dan Template Data
-model = joblib.load('model_dropout_lgbm.pkl')
-template_df = joblib.load('X_template.pkl')
+# model = joblib.load('model_dropout_lgbm.pkl')
+# template_df = joblib.load('X_template.pkl')
+model = joblib.load('model_subset_dropout_lgbm.pkl')
+template_df = joblib.load('X_subset_template.pkl')
 
 st.title("🎓 Prediksi Risiko Dropout Mahasiswa")
 st.write("Silakan isi form di bawah ini untuk memprediksi potensi kelulusan atau dropout mahasiswa.")
